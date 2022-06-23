@@ -96,13 +96,16 @@ export async function seed(){
     const db = admin.firestore();
     var batch = db.batch();
     const docs = await db.collection("users").get();
-    if(docs.empty){
+    if(docs.empty){ 
         console.log("Calling seeder", db.collection("users").doc.length);
-        movements.forEach((doc) => {
-            var docRef = db.collection("movements").doc(); 
-            batch.set(docRef, doc);
-        });
-    
+       var times = 10;
+        for(var i = 0; i < times; i++){
+            movements.forEach((doc) => {
+                var docRef = db.collection("movements").doc(); 
+                batch.set(docRef, doc);
+            });
+        }
+        
         users.forEach((doc) => {
             var docRef = db.collection("users").doc(doc.uid); 
             batch.set(docRef, doc);
