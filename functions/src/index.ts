@@ -10,7 +10,7 @@ admin.initializeApp();
 // seed dummy data for testing
 seed();
 
-CreateMovement.run(1000);
+CreateMovement.run(100);
 
 exports.movement_create_listener = movement_create_listener.onListen;
 exports.movement_update_listener = movement_update_listener.onListen;

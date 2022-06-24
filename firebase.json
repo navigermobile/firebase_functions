@@ -4,11 +4,16 @@
     "source": "functions"
   },
   "emulators": {
+    "auth": {
+      "host": "0.0.0.0",
+      "port": 8084
+    },
     "functions": {
-      "port": 5001
+      "host": "0.0.0.0",
+      "port": 8082
     },
     "firestore": {
-      "port": 5002,
+      "port": 8083,
       "host": "0.0.0.0"
     },
     "ui": {

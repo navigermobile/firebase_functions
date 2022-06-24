@@ -95,10 +95,10 @@ var users = [
 export async function seed(){
     const db = admin.firestore();
     var batch = db.batch();
-    const docs = await db.collection("users").get();
-    if(docs.empty){ 
+   // const docs = await db.collection("users").get();
+    // if(!docs.empty){ 
         console.log("Calling seeder", db.collection("users").doc.length);
-       var times = 10;
+       var times = 2;
         for(var i = 0; i < times; i++){
             movements.forEach((doc) => {
                 var docRef = db.collection("movements").doc(); 
@@ -118,7 +118,7 @@ export async function seed(){
                 codice_portfolio : '001'
             });
         });
-    }
+    // }
     batch.commit();   
 }
 

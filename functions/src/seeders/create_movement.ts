@@ -17,6 +17,7 @@ export class CreateMovement {
                 portfolio_code: "001",
                 user_ref: "abcd"
             });
+            
             console.info(">>>> seeding movement" + i);
         }
         batch.commit();
