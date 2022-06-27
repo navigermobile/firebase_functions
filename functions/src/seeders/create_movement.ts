@@ -15,7 +15,7 @@ export class CreateMovement {
                 line: this.getRandomInt(1,15),
                 machine_code: "OCS9021NWR0031224",
                 moviment_at: Date(),
-                moviment_type: type,
+                moviment_type: type.toString(),
                 portfolio_code: "001",
                 user_ref: usersId[Math.floor(Math.random() * usersId.length)]
             });
