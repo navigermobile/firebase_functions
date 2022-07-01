@@ -23,7 +23,7 @@ export class BalanceCalculator {
             .collection('portfolio')
             .doc(codice_portfolio)
             .update({
-                saldo: saldo
+                balance : saldo
             });
             console.log(">>>> Saldo attuale", saldo);
 

@@ -40,8 +40,11 @@ export class CreateUser {
             // create users from array of users
             db.collection("users")
             .doc(users[i].uid)
-            .update(
-                users[i]
+            .set(
+                {
+                    email : users[i].email,
+                    user_ref :  users[i].uid,
+                }
             );
 
             // create portfolio for specific user 
@@ -51,9 +54,10 @@ export class CreateUser {
             .doc("001"); 
 
             batch.set(portfolioRef, {
-                saldo : 0,
-                codice_portfolio : '001',
-                theme : "teal"
+                balance : 0,
+                portfolio_code : '001',
+                theme : "teal",
+                user_ref :  users[i].uid
             });
 
             console.info(">>>> seeding users" + users[i].email);
