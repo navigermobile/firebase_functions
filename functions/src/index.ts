@@ -8,9 +8,9 @@ const movement_update_listener = require('./movement_update_listener');
 
 admin.initializeApp();
 
-// CreateUser.run();
-// CreateMovement.run(50);
-// CreateNotification.run();
+CreateUser.run();
+CreateMovement.run(50);
+CreateNotification.run();
 
 exports.movement_create_listener = movement_create_listener.onListen;
 exports.movement_update_listener = movement_update_listener.onListen;
